@@ -82,6 +82,7 @@ export default function Project() {
                   className="object-cover w-full h-full"
                   layout="fill"
                   loading="lazy"
+                  placeholder="blur"
                 />
               </div>
               <div className="p-4 flex flex-col justify-between flex-grow">
