@@ -6,6 +6,7 @@ import charizImage from "@/public/charizInteriors.png";
 import ticketistImage from "@/public/ticketist.png";
 import HRSolutionmage from "@/public/HRSolutionPage.png";
 import kanbanMangerImage from "@/public/kanbanManger.png";
+import craftPrideImage from "@/public/craftPride.png";
 
 export default function Project() {
   const projects = [
@@ -16,7 +17,7 @@ export default function Project() {
       alt: "Ticketist homepage",
       key: "Ticketist",
       technologies: "Next.js, Tailwind CSS, Supabase, Google Auth",
-      role: "Full Stack Developer",
+      role: "Full Stack Developer and Designer",
       description: `
         Ticketist is a modern, user-friendly event management platform designed to make discovering and attending events seamless and enjoyable. With features like QR-code ticketing, real-time event updates, and personalized recommendations, Ticketist ensures a hassle-free experience for event-goers. Sign up easily using Google authentication and explore events tailored to your preferences.`,
     },
@@ -31,6 +32,19 @@ export default function Project() {
       description:
         "A sleek interior design platform showcasing premium designs, services, and portfolios. Implemented modern animations and a responsive layout to enhance user interaction.",
     },
+
+    {
+      name: "Craft Beer",
+      link: "https://craft-pride-i7za.vercel.app/",
+      image: craftPrideImage,
+      alt: "Craft Beer website",
+      key: "Craft Beer",
+      technologies: "Next.js, Tailwind CSS, Framer Motion",
+      role: "Frontend Developer and Designer",
+      description:
+        "​Craft Pride is a website dedicated to showcasing a diverse range of craft beers, emphasizing quality, tradition, and innovation in brewing. The site offers insights into their brewing process, highlighting sustainable practices, craftsmanship, and the use of premium ingredients. Visitors can explore various beer flavors, each with detailed descriptions and pricing, catering to different palates. Additionally, Craft Pride features news and events related to their offerings, fostering a community centered around the appreciation of craft beer.",
+    },
+
     {
       name: "HR Solution",
       link: "https://hr-solutions-3lbh.vercel.app/",
@@ -38,10 +52,11 @@ export default function Project() {
       alt: "HR Solution dashboard",
       key: "HR Solution",
       technologies: "Next.js, Tailwind CSS, Framer Motion",
-      role: "Frontend Developer",
+      role: "Frontend Developer and Designer",
       description:
         "A powerful HR management tool for efficiently managing employee records, payroll, and tasks. Designed with a user-friendly interface and dynamic feature set.",
     },
+
     {
       name: "Kanban Manager",
       link: "https://enchanting-pastelito-dafd8b.netlify.app/",
