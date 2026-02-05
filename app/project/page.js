@@ -7,6 +7,7 @@ import ticketistImage from "@/public/ticketist.png";
 import HRSolutionmage from "@/public/HRSolutionPage.png";
 import kanbanMangerImage from "@/public/kanbanManger.png";
 import craftPrideImage from "@/public/craftPride.png";
+import hedgeimpact from "@/public/hedgeimpact.png";
 
 export default function Project() {
   const projects = [
@@ -21,6 +22,19 @@ export default function Project() {
       description: `
         Ticketist is a modern, user-friendly event management platform designed to make discovering and attending events seamless and enjoyable. With features like QR-code ticketing, real-time event updates, and personalized recommendations, Ticketist ensures a hassle-free experience for event-goers. Sign up easily using Google authentication and explore events tailored to your preferences.`,
     },
+
+    {
+      name: "Hedge Impact",
+      link: "https://hr-solutions-3lbh.vercel.app/",
+      image: hedgeimpact,
+      alt: "Hedge Impact",
+      key: "Hedge Impact",
+      technologies: "Next.js, Tailwind CSS, Framer Motion",
+      role: "Frontend Developer and Designer",
+      description:
+        "A web platform built for an NGO to showcase its mission, programs, and social impact. Features include impact highlights, program details, and a responsive, accessible design aimed at improving visibility, donor engagement, and community outreach.",
+    },
+
     {
       name: "Chariz Interiors",
       link: "https://chariz.bojisua.com/",

@@ -40,7 +40,7 @@ export default function Home() {
         </Link>
 
         <Link
-          href="https://drive.google.com/file/d/1-Lu9BUKYtEDcIr7b8BgN3V10gHN0DyhL/view?usp=sharing"
+          href="https://drive.google.com/file/d/1I1LDG4VdOkpqJHMhM3gQmMMpzNDModlQ/view?usp=sharing"
           className="text-[#fcd65c] no-underline"
         >
           <button className="w-24 h-10 border-2 border-[#fcd65c] bg-[#232323] text-[#fcd65c] hover:bg-[#fcd65c] hover:text-[#232323]">
@@ -83,7 +83,7 @@ export default function Home() {
             experiences.
           </p>
           <Link
-            href="https://drive.google.com/file/d/1-Lu9BUKYtEDcIr7b8BgN3V10gHN0DyhL/view?usp=sharing"
+            href="https://drive.google.com/file/d/1I1LDG4VdOkpqJHMhM3gQmMMpzNDModlQ/view?usp=sharing"
             className="text-[#232323] no-underline"
           >
             <button className="w-44 h-12 mt-4 font-bold bg-[#fcd65c] text-[#232323] hover:bg-[#232323] hover:text-[#fcd65c] border-[#fcd65c] border">
