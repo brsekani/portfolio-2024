@@ -92,7 +92,7 @@ export default function Home() {
                   className="inline-flex items-center justify-center  gap-2 bg-[#fcd65c] text-[#0f0f0f] font-medium text-[14px] px-6 py-3 rounded-lg hover:bg-[#ffe07a] hover:-translate-y-px transition-all no-underline w-full md:w-fit"
                 >
                   <HiDownload className="text-base" />
-                  Download Resume
+                  View Resume
                 </Link>
                 <Link
                   href="/project"
