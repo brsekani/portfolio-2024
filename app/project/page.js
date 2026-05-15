@@ -1,140 +1,193 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { GoDotFill } from "react-icons/go";
+import {
+  HiArrowUpRight,
+  HiOutlineShoppingCart,
+  HiOutlineTicket,
+  HiOutlineBuildingOffice2,
+} from "react-icons/hi2";
 
-import charizImage from "@/public/charizInteriors.png";
+import { FaBitcoin, FaHeart } from "react-icons/fa";
+import { PiBeerBottleLight } from "react-icons/pi";
+
 import ticketistImage from "@/public/ticketist.png";
-import HRSolutionmage from "@/public/HRSolutionPage.png";
-import kanbanMangerImage from "@/public/kanbanManger.png";
 import craftPrideImage from "@/public/craftPride.png";
 import hedgeimpact from "@/public/hedgeimpact.png";
+import IFETOMarket from "@/public/IFETO-Market.png";
+import cryptomadness from "@/public/cryptomadness.png";
+import hotela from "@/public/hotela.png";
 
 export default function Project() {
   const projects = [
     {
+      name: "IFETO Market",
+      link: "https://www.ifetomarket.com/",
+      image: IFETOMarket,
+      icon: <HiOutlineShoppingCart />,
+      technologies: ["Next.js", "Tailwind", "Stripe", "TypeScript"],
+      role: "Frontend Developer",
+      description:
+        "Multi-vendor e-commerce platform connecting customers and vendors with admin approval workflows and seamless checkout.",
+    },
+
+    {
+      name: "Cryptomadness",
+      link: "https://www.cryptomadness.info/",
+      image: cryptomadness,
+      icon: <FaBitcoin />,
+      technologies: ["React", "Tailwind", "Framer", "TypeScript"],
+      role: "Frontend Developer",
+      description:
+        "Secure crypto investment platform where investors connect with traders and monitor profits, losses, and balances in real time.",
+    },
+
+    {
       name: "Ticketist",
       link: "https://ticketist-f5bo.vercel.app/",
       image: ticketistImage,
-      alt: "Ticketist homepage",
-      key: "Ticketist",
-      technologies: "Next.js, Tailwind CSS, Supabase, Google Auth",
-      role: "Full Stack Developer and Designer",
-      description: `
-        Ticketist is a modern, user-friendly event management platform designed to make discovering and attending events seamless and enjoyable. With features like QR-code ticketing, real-time event updates, and personalized recommendations, Ticketist ensures a hassle-free experience for event-goers. Sign up easily using Google authentication and explore events tailored to your preferences.`,
+      icon: <HiOutlineTicket />,
+      technologies: ["Next.js", "Supabase", "Google Auth"],
+      role: "Full Stack + Designer",
+      description:
+        "Modern event management platform with QR-code ticketing, live updates, and personalized event recommendations.",
+    },
+
+    {
+      name: "Hotela",
+      link: "https://hotela.vercel.app/",
+      image: hotela,
+      icon: <HiOutlineBuildingOffice2 />,
+      technologies: ["Next.js", "Supabase", "Tailwind"],
+      role: "Frontend + Designer",
+      description:
+        "Modern hotel booking platform for discovering, comparing, and reserving accommodations across different budgets.",
     },
 
     {
       name: "Hedge Impact",
       link: "https://hr-solutions-3lbh.vercel.app/",
       image: hedgeimpact,
-      alt: "Hedge Impact",
-      key: "Hedge Impact",
-      technologies: "Next.js, Tailwind CSS, Framer Motion",
-      role: "Frontend Developer and Designer",
+      icon: <FaHeart />,
+      technologies: ["Next.js", "Tailwind", "Framer Motion"],
+      role: "Frontend + Designer",
       description:
-        "A web platform built for an NGO to showcase its mission, programs, and social impact. Features include impact highlights, program details, and a responsive, accessible design aimed at improving visibility, donor engagement, and community outreach.",
-    },
-
-    {
-      name: "Chariz Interiors",
-      link: "https://chariz.bojisua.com/",
-      image: charizImage,
-      alt: "Chariz Interiors homepage",
-      key: "chariz",
-      technologies: "React, Tailwind CSS, Framer Motion, Axois, Redux",
-      role: "Frontend Developer",
-      description:
-        "A sleek interior design platform showcasing premium designs, services, and portfolios. Implemented modern animations and a responsive layout to enhance user interaction.",
+        "NGO platform showcasing mission, programs, and social impact with accessible and engaging user experience.",
     },
 
     {
       name: "Craft Beer",
       link: "https://craft-pride-i7za.vercel.app/",
       image: craftPrideImage,
-      alt: "Craft Beer website",
-      key: "Craft Beer",
-      technologies: "Next.js, Tailwind CSS, Framer Motion",
-      role: "Frontend Developer and Designer",
+      icon: <PiBeerBottleLight />,
+      technologies: ["Next.js", "Tailwind", "Framer Motion"],
+      role: "Frontend + Designer",
       description:
-        "​Craft Pride is a website dedicated to showcasing a diverse range of craft beers, emphasizing quality, tradition, and innovation in brewing. The site offers insights into their brewing process, highlighting sustainable practices, craftsmanship, and the use of premium ingredients. Visitors can explore various beer flavors, each with detailed descriptions and pricing, catering to different palates. Additionally, Craft Pride features news and events related to their offerings, fostering a community centered around the appreciation of craft beer.",
-    },
-
-    {
-      name: "HR Solution",
-      link: "https://hr-solutions-3lbh.vercel.app/",
-      image: HRSolutionmage,
-      alt: "HR Solution dashboard",
-      key: "HR Solution",
-      technologies: "Next.js, Tailwind CSS, Framer Motion",
-      role: "Frontend Developer and Designer",
-      description:
-        "A powerful HR management tool for efficiently managing employee records, payroll, and tasks. Designed with a user-friendly interface and dynamic feature set.",
-    },
-
-    {
-      name: "Kanban Manager",
-      link: "https://enchanting-pastelito-dafd8b.netlify.app/",
-      image: kanbanMangerImage,
-      alt: "Kanban Manager interface",
-      key: "kanban",
-      technologies: "React, Tailwind CSS, Framer Motion",
-      role: "Frontend Developer",
-      description:
-        "A task management app utilizing Kanban methodology. Features drag-and-drop functionality and a clean design to boost productivity and task organization.",
+        "Brand website for a craft brewery showcasing flavors, brewing process, sustainability, and events.",
     },
   ];
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-[#232323] text-white font-['Varela_Round'] w-full px-10 pb-10">
-      <div className="flex items-center justify-center w-full mt-10 mb-4">
-        <div className="flex items-center">
-          <h1 className="text-[#fcd65c] text-3xl text-nowrap">Projects</h1>
-          <GoDotFill color="#fcd65c" size={30} />
-        </div>
-        <hr className="flex-grow hidden w-full ml-4 border-t border-gray-400 sm:flex" />
-      </div>
+    <section className="min-h-screen bg-[#0f0f0f] text-white px-6 md:px-10 pb-24">
+      <div className="max-w-[1440px] mx-auto">
+        {/* Header */}
+        <div className="md:pt-14 pt-5 pb-10">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-[1px] bg-white/20" />
+            <span className="uppercase tracking-[0.25em] text-[11px] text-white/35">
+              Selected Work
+            </span>
+          </div>
 
-      <div className="grid grid-cols-1 gap-6 mt-12 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <Link
-            key={project.key}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white no-underline project-link"
-          >
-            <div className="relative flex flex-col justify-between w-full max-w-xs overflow-hidden transition-shadow duration-300 rounded-lg shadow-lg project-item bg-[#2a2a2a] h-full">
-              <div className="relative w-full h-[200px] bg-gray-700">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+            Projects & <span className="text-[#fcd65c]">Case Studies</span>
+          </h1>
+
+          <p className="mt-5 text-white/45 leading-7 max-w-[600px] text-[15px]">
+            A curated selection of real-world products I&apos;ve built
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {projects.map((project) => (
+            <Link
+              key={project.name}
+              href={project.link}
+              target="_blank"
+              className="group bg-white/[0.03] border border-white/[0.07] rounded-2xl overflow-hidden hover:border-[#fcd65c]/20 transition-all duration-300 hover:-translate-y-1 no-underline"
+            >
+              {/* Image */}
+              <div className="relative h-[220px] overflow-hidden">
                 <Image
                   src={project.image}
-                  alt={project.alt}
-                  className="object-cover w-full h-full"
-                  layout="fill"
-                  loading="lazy"
-                  placeholder="blur"
+                  alt={project.name}
+                  fill
+                  className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
                 />
-              </div>
-              <div className="p-4 flex flex-col justify-between flex-grow">
-                <h2 className="text-lg font-semibold text-[#fcd65c]">
-                  {project.name}
-                </h2>
-                <p className="mt-2 text-sm text-gray-300 flex-grow">
-                  {project.description}
-                </p>
-                <div className="mt-4">
-                  <p className="text-sm text-[#fcd65c]">
-                    <span className="font-semibold">Technologies:</span>{" "}
-                    {project.technologies}
-                  </p>
-                  <p className="mt-1 text-sm text-gray-300">
-                    <span className="font-semibold">Role:</span> {project.role}
-                  </p>
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-[#0f0f0f]/20 to-transparent" />
+
+                {/* Live badge */}
+                <div className="absolute top-4 right-4">
+                  <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-black/60 border border-white/10 backdrop-blur-md">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                    <span className="text-[10px] text-white/60 uppercase tracking-wider">
+                      Live
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Link>
-        ))}
+
+              {/* Content */}
+              <div className="p-5">
+                {/* Role */}
+                <p className="text-[11px] uppercase tracking-[0.2em] text-[#fcd65c]/70 mb-3">
+                  {project.role}
+                </p>
+
+                {/* Name */}
+                <div className="flex items-center justify-between mb-3">
+                  <h2 className="text-[20px] font-semibold text-white">
+                    {project.name}
+                  </h2>
+
+                  <div className="w-9 h-9 rounded-xl bg-[#fcd65c]/10 border border-[#fcd65c]/10 flex items-center justify-center text-[#fcd65c] text-lg">
+                    {project.icon}
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-sm leading-7 text-white/45 line-clamp-3">
+                  {project.description}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mt-5">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2.5 py-1 rounded-full text-[11px] border border-white/[0.07] bg-white/[0.03] text-white/40"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Footer */}
+                <div className="flex items-center justify-between mt-6 pt-5 border-t border-white/[0.06]">
+                  <span className="text-[13px] text-[#fcd65c] flex items-center gap-1">
+                    Visit Site
+                    <HiArrowUpRight className="text-sm" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
