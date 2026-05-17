@@ -1,6 +1,7 @@
 import { Varela_Round, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { LuFileText } from "react-icons/lu";
 
 const varela = Varela_Round({
   weight: "400",
@@ -34,7 +35,6 @@ export default function RootLayout({ children }) {
                 LAWAL
                 <span className="w-1.5 h-1.5 rounded-full bg-[#fcd65c] animate-pulse" />
               </Link>
-
               <div className="md:flex hidden items-center gap-6">
                 <Link
                   href="/project"
@@ -61,16 +61,17 @@ export default function RootLayout({ children }) {
               <Link
                 href="https://drive.google.com/file/d/1I1LDG4VdOkpqJHMhM3gQmMMpzNDModlQ/view?usp=sharing"
                 target="_blank"
-                className="text-[13px] px-4 py-1.5 border border-[#fcd65c]/50 text-[#fcd65c] rounded-md hover:bg-[#fcd65c] hover:text-[#0f0f0f] transition-all no-underline"
+                className="flex items-center gap-2 rounded-md border border-[#fcd65c]/50 px-4 py-2 text-[13px] text-[#fcd65c] transition-all hover:bg-[#fcd65c] hover:text-[#0f0f0f] no-underline"
               >
-                My CV ↗
+                <LuFileText size={16} />
+                My CV
               </Link>
             </nav>
           </div>
         </header>
 
         {/* Page Content */}
-        <main className="pt-[90px]">{children}</main>
+        <main className="pt-[90px] h-dvh">{children}</main>
       </body>
     </html>
   );
