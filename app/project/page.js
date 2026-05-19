@@ -67,7 +67,7 @@ export default function Project() {
 
     {
       name: "Hedge Impact",
-      link: "https://hr-solutions-3lbh.vercel.app/",
+      link: "https://www.hedgeimpact.org/",
       image: hedgeimpact,
       icon: <FaHeart />,
       technologies: ["Next.js", "Tailwind", "Framer Motion"],
