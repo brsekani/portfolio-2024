@@ -2,6 +2,7 @@ import { Varela_Round, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { LuFileText } from "react-icons/lu";
+import TawkChat from "./components/chat/TawkChat";
 
 const varela = Varela_Round({
   weight: "400",
@@ -72,6 +73,7 @@ export default function RootLayout({ children }) {
 
         {/* Page Content */}
         <main className="pt-[90px] h-dvh">{children}</main>
+        <TawkChat />
       </body>
     </html>
   );
