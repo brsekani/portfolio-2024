@@ -7,6 +7,7 @@ import {
   HiOutlineShoppingCart,
   HiOutlineTicket,
   HiOutlineBuildingOffice2,
+  HiOutlineScissors,
 } from "react-icons/hi2";
 
 import { FaBitcoin, FaHeart } from "react-icons/fa";
@@ -16,8 +17,9 @@ import ticketistImage from "@/public/ticketist.png";
 import craftPrideImage from "@/public/craftPride.png";
 import hedgeimpact from "@/public/hedgeimpact.png";
 import IFETOMarket from "@/public/IFETO-Market.png";
-import cryptomadness from "@/public/cryptomadness.png";
-import hotela from "@/public/hotela.png";
+// import cryptomadness from "@/public/cryptomadness.png";
+// import hotela from "@/public/hotela.png";
+import FlourishMax from "@/public/flourish-max.png";
 
 export default function Project() {
   const projects = [
@@ -33,15 +35,33 @@ export default function Project() {
     },
 
     {
-      name: "Cryptomadness",
-      link: "https://www.cryptomadness.info/",
-      image: cryptomadness,
-      icon: <FaBitcoin />,
-      technologies: ["React", "Tailwind", "Framer", "TypeScript"],
-      role: "Frontend Developer",
+      name: "Flourish Max Salon & Academy",
+      link: "https://flourishmax.org/",
+      image: FlourishMax,
+      icon: <HiOutlineScissors />,
+      technologies: [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Laravel",
+        "Paystack",
+        "Redux Toolkit",
+      ],
+      role: "Frontend Developer & Project Manager",
       description:
-        "Secure crypto investment platform where investors connect with traders and monitor profits, losses, and balances in real time.",
+        "Salon management platform featuring a public website and admin dashboard for managing branches, staff, services, appointments, expenses, transactions, job applications, and Paystack payments.",
     },
+
+    // {
+    //   name: "Cryptomadness",
+    //   link: "https://www.cryptomadness.info/",
+    //   image: cryptomadness,
+    //   icon: <FaBitcoin />,
+    //   technologies: ["React", "Tailwind", "Framer", "TypeScript"],
+    //   role: "Frontend Developer",
+    //   description:
+    //     "Secure crypto investment platform where investors connect with traders and monitor profits, losses, and balances in real time.",
+    // },
 
     {
       name: "Ticketist",
@@ -54,16 +74,16 @@ export default function Project() {
         "Modern event management platform with QR-code ticketing, live updates, and personalized event recommendations.",
     },
 
-    {
-      name: "Hotela",
-      link: "https://hotela.vercel.app/",
-      image: hotela,
-      icon: <HiOutlineBuildingOffice2 />,
-      technologies: ["Next.js", "Supabase", "Tailwind"],
-      role: "Frontend + Designer",
-      description:
-        "Modern hotel booking platform for discovering, comparing, and reserving accommodations across different budgets.",
-    },
+    // {
+    //   name: "Hotela",
+    //   link: "https://hotela.vercel.app/",
+    //   image: hotela,
+    //   icon: <HiOutlineBuildingOffice2 />,
+    //   technologies: ["Next.js", "Supabase", "Tailwind"],
+    //   role: "Frontend + Designer",
+    //   description:
+    //     "Modern hotel booking platform for discovering, comparing, and reserving accommodations across different budgets.",
+    // },
 
     {
       name: "Hedge Impact",
