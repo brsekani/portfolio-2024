@@ -93,7 +93,7 @@ export default function ContactPage() {
         </div>
 
         {/* Contact form */}
-        <ContactForm email={EMAIL} />
+        <ContactForm />
       </div>
     </section>
   );
