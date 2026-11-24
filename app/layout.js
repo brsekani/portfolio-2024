@@ -40,6 +40,10 @@ export const metadata = {
   creator: "Lawal Temidayo",
   publisher: "Lawal Temidayo",
 
+  verification: {
+    google: "L4mtqKXBhn_lUCl1lXgg2jpF4FnEaMmWx9sv9qTDmsY",
+  },
+
   keywords: [
     "Lawal Temidayo",
     "Frontend Developer",
