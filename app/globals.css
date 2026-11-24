@@ -7,12 +7,19 @@
   --foreground: #ffffff;
 }
 
-html,
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  overflow-x: clip;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {

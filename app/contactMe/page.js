@@ -1,116 +1,100 @@
-import { GoDotFill } from "react-icons/go";
-import { IoMdMail } from "react-icons/io";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import Link from "next/link";
+import { HiArrowUpRight } from "react-icons/hi2";
+import ContactForm from "../components/ContactForm";
 
 export const metadata = {
-  title: "Contact Lawal Temidayo",
-  description: "Get in touch with best developer in town",
+  title: "Contact | Lawal Temidayo – Frontend Developer",
+  description:
+    "Contact Lawal Temidayo, a Frontend Developer specialising in React.js, Next.js and React Native, for freelance projects, job opportunities and collaborations.",
+  alternates: {
+    canonical: "/contactMe",
+  },
+  openGraph: {
+    title: "Contact Lawal Temidayo",
+    description:
+      "Get in touch with Lawal Temidayo about frontend development projects, collaborations and job opportunities.",
+    url: "/contactMe",
+    type: "website",
+  },
 };
 
-export default function Page() {
-  const iconStyle = {
-    cursor: "pointer",
-  };
+const EMAIL = "lawaltemidayo06@gmail.com";
 
+const LINKS = [
+  {
+    href: "https://github.com/brsekani/",
+    label: "GitHub",
+  },
+  {
+    href: "https://www.linkedin.com/in/lawal-temidayo-0b024b270/",
+    label: "LinkedIn",
+  },
+  {
+    href: "https://twitter.com/SeKaNi_TeCh",
+    label: "Twitter",
+  },
+];
+
+export default function ContactPage() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-[#232323] text-white font-['Varela_Round'] w-full px-10 py-10">
-      <div className="flex items-center justify-center mt-10 mb-4 w-full">
-        <div className="flex items-center">
-          <h1 className="text-[#fcd65c] text-3xl text-nowrap">Contact Me</h1>
-          <GoDotFill color="#fcd65c" size={30} />
-        </div>
-        <hr className="flex-grow border-t w-full border-gray-400 ml-4 hidden sm:flex" />
-      </div>
+    <section
+      aria-labelledby="contact-heading"
+      className="mx-auto max-w-[1440px] px-6 pb-24 pt-6 md:px-10 md:pt-12"
+    >
+      <h1
+        id="contact-heading"
+        className="max-w-full text-center font-[family-name:var(--font-display)] text-[clamp(3rem,9vw,8rem)] font-bold leading-[0.9] tracking-[-0.04em]"
+      >
+        Let&apos;s talk about everything.
+      </h1>
 
-      <div className="flex flex-col lg:flex-row items-center justify-between mt-8 mb-8 gap-10">
-        {/* Left Section: Contact Message */}
-        <div className="flex flex-col items-center md:items-start lg:w-1/3 text-center md:text-left">
-          <h2 className="text-[#fcd65c] text-2xl font-semibold">
-            Let&#39;s talk about everything!
-          </h2>
-          <p className="mt-2 text-lg leading-relaxed w-full lg:w-96">
-            Feel free to get in touch with me. I am always open to discussing
-            new projects, creative ideas, or opportunities to be part of your
-            vision.
+      <div className="mt-14 grid gap-16 md:mt-24 md:grid-cols-[1fr_1.1fr] md:gap-24">
+        {/* Direct contact */}
+        <div>
+          <p className="max-w-[44ch] text-[17px] leading-relaxed text-[#ebe7dd]/65">
+            I&apos;m always open to new projects, creative ideas and
+            opportunities to be part of your vision. Write to me directly or use
+            the contact form.
           </p>
 
-          <div className="flex items-center gap-6 mt-6">
-            <a
-              href="mailto:lawaltemidayo06@gmail.com"
-              className="text-white hover:text-[#fcd65c] transition-colors"
-              style={iconStyle}
-            >
-              <IoMdMail size={30} />
-            </a>
-            <a
-              href="https://github.com/brsekani/"
-              className="text-white hover:text-[#fcd65c] transition-colors"
-              style={iconStyle}
-            >
-              <FaGithub size={30} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/lawal-temidayo-0b024b270/"
-              className="text-white hover:text-[#fcd65c] transition-colors"
-              style={iconStyle}
-            >
-              <FaLinkedin size={30} />
-            </a>
-            <a
-              href="https://twitter.com/SeKaNi_TeCh"
-              className="text-white hover:text-[#fcd65c] transition-colors"
-              style={iconStyle}
-            >
-              <FaTwitter size={30} />
-            </a>
-          </div>
-        </div>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="group mt-8 inline-block break-all font-[family-name:var(--font-display)] text-[clamp(1.35rem,3vw,2.25rem)] font-semibold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fcd65c]"
+          >
+            <span className="bg-[linear-gradient(#fcd65c,#fcd65c)] bg-[length:0%_3px] bg-left-bottom bg-no-repeat pb-1 transition-[background-size] duration-500 group-hover:bg-[length:100%_3px] motion-reduce:transition-none">
+              {EMAIL}
+            </span>
+          </a>
 
-        {/* Right Section: Contact Form */}
-        <div className="w-full lg:w-1/2">
-          <form className="space-y-6">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="w-full">
-                <label className="block mb-1 text-[#fcd65c]">Full Name</label>
-                <input
-                  type="text"
-                  placeholder="Your full name"
-                  className="w-full h-12 rounded-full bg-gray-700 text-white px-4 focus:ring-2 focus:ring-[#fcd65c] transition"
-                />
-              </div>
-              <div className="w-full">
-                <label className="block mb-1 text-[#fcd65c]">Email</label>
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="w-full h-12 rounded-full bg-gray-700 text-white px-4 focus:ring-2 focus:ring-[#fcd65c] transition"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block mb-1 text-[#fcd65c]">Subject</label>
-              <input
-                type="text"
-                placeholder="Your subject"
-                className="w-full h-12 rounded-full bg-gray-700 text-white px-4 focus:ring-2 focus:ring-[#fcd65c] transition"
+          <nav aria-label="Social media profiles">
+            <ul className="mt-12">
+              {LINKS.map(({ href, label }) => (
+                <li key={label}>
+                  <Link
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center justify-between border-t border-[#ebe7dd]/12 py-4 text-lg transition-colors hover:text-[#fcd65c] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#fcd65c] md:max-w-sm"
+                  >
+                    {label}
+                    <HiArrowUpRight
+                      aria-hidden="true"
+                      className="transition-transform duration-300 group-hover:rotate-45"
+                    />
+                  </Link>
+                </li>
+              ))}
+              <li
+                aria-hidden="true"
+                className="border-t border-[#ebe7dd]/12 md:max-w-sm"
               />
-            </div>
-
-            <div>
-              <label className="block mb-1 text-[#fcd65c]">Message</label>
-              <textarea
-                placeholder="Your Message"
-                className="w-full h-32 rounded-lg bg-gray-700 text-white p-4 focus:ring-2 focus:ring-[#fcd65c] transition"
-              ></textarea>
-            </div>
-
-            <button className="w-full lg:w-1/3 h-12 bg-[#fcd65c] text-gray-800 rounded-full border-2 border-[#fcd65c] hover:bg-gray-800 hover:text-[#fcd65c] transition">
-              Send Message
-            </button>
-          </form>
+            </ul>
+          </nav>
         </div>
+
+        {/* Contact form */}
+        <ContactForm email={EMAIL} />
       </div>
-    </div>
+    </section>
   );
 }

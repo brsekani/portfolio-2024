@@ -1,37 +1,66 @@
-export default function Page() {
+import Link from "next/link";
+import { HiArrowUpRight } from "react-icons/hi2";
+
+export const metadata = {
+  title: "Blog | Lawal Temidayo – Frontend Development",
+  description:
+    "Articles and insights from Lawal Temidayo on frontend development, React.js, Next.js, JavaScript, TypeScript, UI engineering and building digital products.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog | Lawal Temidayo",
+    description:
+      "Notes, lessons and insights on frontend development, React, Next.js and building better digital experiences.",
+    url: "/blog",
+    type: "website",
+  },
+};
+
+export default function BlogPage() {
   return (
-    <div className="relative flex items-center justify-center min-h-[90vh] overflow-hidden bg-[#0b0b0b] px-6">
-      {/* background glow */}
-      <div className="absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#fcd65c]/10 blur-[140px]" />
+    <section
+      aria-labelledby="blog-heading"
+      className="mx-auto flex min-h-[calc(100dvh-76px)] max-w-[1440px] flex-col items-center justify-center px-6 pb-24 pt-6 md:px-10"
+    >
+      <h1
+        id="blog-heading"
+        className="text-center font-[family-name:var(--font-display)] text-[clamp(3rem,11vw,10rem)] font-bold leading-[0.88] tracking-[-0.045em]"
+      >
+        First posts
+        <br />
+        coming soon
+        <span
+          aria-hidden="true"
+          className="ml-[0.08em] inline-block h-[0.72em] w-[0.1em] translate-y-[0.04em] bg-[#fcd65c] motion-safe:animate-pulse"
+        />
+      </h1>
 
-      {/* content */}
-      <div className="relative z-10 flex flex-col items-center text-center">
-        {/* badge */}
-        <div className="mb-6 flex items-center gap-2 rounded-full border border-[#fcd65c]/20 bg-[#fcd65c]/5 px-4 py-2">
-          <span className="h-2 w-2 animate-pulse rounded-full bg-[#fcd65c]" />
+      <p className="mt-8 max-w-[46ch] text-center text-[17px] leading-relaxed text-[#ebe7dd]/65 md:mt-12">
+        I&apos;m writing about what I learn while building for the web, with
+        practical notes on React, Next.js, JavaScript, TypeScript and the
+        interface details that make digital products feel right. New articles
+        are coming soon.
+      </p>
 
-          <p className="text-[12px] uppercase tracking-[0.25em] text-[#fcd65c]">
-            In Progress
-          </p>
-        </div>
+      <nav
+        aria-label="Explore more"
+        className="mt-10 flex w-full flex-wrap justify-center gap-3"
+      >
+        <Link
+          href="/project"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#fcd65c] px-6 py-3 text-[15px] font-medium text-[#17191d] transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fcd65c] md:w-fit"
+        >
+          See my work <HiArrowUpRight aria-hidden="true" />
+        </Link>
 
-        {/* heading */}
-        <h1 className="max-w-3xl text-5xl font-bold leading-tight text-white md:text-7xl">
-          Something
-          <span className="text-[#fcd65c]"> amazing</span> is coming soon.
-        </h1>
-
-        {/* description */}
-        <p className="mt-6 max-w-xl text-[15px] leading-8 text-white/55 md:text-[16px]">
-          I’m currently building this page with a strong focus on clean design,
-          smooth interactions, and a modern user experience.
-        </p>
-
-        {/* button */}
-        <button className="mt-10 rounded-2xl border border-[#fcd65c]/30 bg-[#fcd65c]/10 px-6 py-3 text-sm font-medium text-[#fcd65c] transition-all duration-300 hover:bg-[#fcd65c] hover:text-black">
-          Launching Soon ✨
-        </button>
-      </div>
-    </div>
+        <Link
+          href="/contactMe"
+          className="inline-flex w-full items-center justify-center rounded-full border border-[#ebe7dd]/20 px-6 py-3 text-[15px] transition-colors hover:border-[#ebe7dd]/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fcd65c] md:w-fit"
+        >
+          Say hello
+        </Link>
+      </nav>
+    </section>
   );
 }
